@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Streaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg">
+        <div class="w-full max-w-7xl mx-auto px-4 py-4">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-2 sm:space-y-0">
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-bold text-white">Website Nonton anime Khusus ke sayangan ku</h1>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-pink-500">Anita Kurnia wati ❤️</h2>
+                    
+                    <p class="text-gray-400 text-sm sm:text-base mt-1">Hineko Note Season 1 • TV Series</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm bg-blue-600 px-3 py-1 rounded-full">HD</span>
+                    <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Sub Indo</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="w-full max-w-7xl mx-auto px-2 sm:px-4 py-4 sm:py-8">
+        <!-- Video Player Section -->
+        <div class="mb-4 sm:mb-8">
+            <div class="relative pt-[56.25%] bg-black rounded-lg overflow-hidden shadow-lg">
+                <iframe id="videoPlayer" 
+                    class="absolute top-0 left-0 w-full h-full"
+                    src="https://gdriveplayer.to/embed2.php?link=nuL17HI12fitdVtxy%252Fc%252FKwpMf1RIpALu2QHRm72F1Z%252FGsC1Hztq4DDgs0Baegzffd54DB3QjLB3cU%252FMnP1fnCxjjD3odagHeu6fMQZVCiOra6dR3qs4pzMRBPTemzF41HXuj%252F4GaOc%252BResf%252Fy0n1UrdjI0mPF2xXRDypEOt3ROTlg%252BOb8vEH3Waksg1WmNDiW8TrSHwKTF6V6sq7oY3uZb&autoplay=1"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Episode Selection -->
+        <div class="mb-4 sm:mb-8">
+            <h2 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-2">Episodes</h2>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 sm:gap-4">
+                <!-- Episode buttons -->
+                <button onclick="changeEpisode(1)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 1
+                </button>
+                <button onclick="changeEpisode(2)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 2
+                </button>
+                <button onclick="changeEpisode(3)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 3
+                </button>
+                <button onclick="changeEpisode(4)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 4
+                </button>
+                <button onclick="changeEpisode(5)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 5
+                </button>
+                <button onclick="changeEpisode(6)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 6
+                </button>
+                <button onclick="changeEpisode(7)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 7
+                </button>
+                <button onclick="changeEpisode(8)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 8
+                </button>
+                <button onclick="changeEpisode(9)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 9
+                </button>
+                <button onclick="changeEpisode(10)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 10
+                </button>
+                <button onclick="changeEpisode(11)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 11
+                </button>
+                <button onclick="changeEpisode(12)" class="episode-btn bg-gray-800 hover:bg-gray-700 p-2 sm:p-4 rounded text-center transition-colors text-sm sm:text-base">
+                    EP 12
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Array to store episode URLs
+        const episodeLinks = {
+            1: "https://gdriveplayer.to/embed2.php?link=mmRGfl%252FTZ3a2Gn4%252FgKIYpAqNfeU3po1MXtHsrVfLLwYVFP4HtbmNxNLmGNTMzKv9PElFup5g63ick6DsaCmPUN6zzJV7NkYbWda93lfrhOwUqq%252BzPkuvk%252F80Tz%252FeqqvCFHv%252BdfdWpHig0cpRUpxMTyR2e9Pmwo%252FI86lh5n%252FyON%252FChCFcXthMpFQsh%252Fsvdg7G51PA%252Fp8l2fiI0FSYZFSo8L&autoplay=1",
+            2: "https://gdriveplayer.to/embed2.php?link=birVSdc7TS7ro1ISE39%252FjgsE8YzCt7sb0CAePUrbbFN9PRNFTMNjEfM%252FlOIpIB%252B44UfipST7was6QQoA3Sq6c4lI%252B2Iyr1xfZkVzeIMZfehAPr7UiKhLy355WsWBmGIQCfMY7h6pFx3FkwftwRJcoBkg38nMwL5%252B%252BJk56%252FOp8DAnh%252BCkLxn73mXhU%252FzJOggPsi%252BRx8VHKmiTxW7TYiVcWX&autoplay=1",
+            3: "https://gdriveplayer.to/embed2.php?link=nkqcAcZaGWGt1N4lN4PHwwXIeAUCOAhcY49BhiuZRHDYskcAFTvYGlWzvV0fg029gItn%252BOXFBmPR0YG2olrfaENFiqijoJ6oQu2vjHbrbsWwKO6DW0cmtU27nZuLdicvztWbEMNIsMDX4wPAqCEYduLLHvQQWCMWNk4iFpCTfJn3Xc0v2IMMW05HuGuZfZYggEjBdDdBUqga74akv0Hgpp&autoplay=1",
+            4: "https://gdriveplayer.to/embed2.php?link=3AxDIdH8UIv7kqgQoduk0gzd4e%252Fjfj%252BbbCxqF30dnqkX1%252BslztVdXQt0XRIYzG3VndCsjp3rVvsPFfKowsC6u9ubMPJUrKrSinQpm6g9lhPAo9WLRqFpF1SARIbIILggBEqowDJIXgAicPRIIfyS%252Fjz%252B0zoHlXUSIBDFvO0iaKmKuTeZ0ZrVXINdBfJH1IwwvM5sDEXfBM1MlnszqM%252FxpU&autoplay=1",
+            5: "https://gdriveplayer.to/embed2.php?link=FtOhj65sZtq7fjI63ydlFQ82AyOwGwMb3HEtXUBHuuHlycawf5q3%252BDsnqXw%252BCtikASDfGZIyZYoo12o8lrqoPsYNo9mw01Bzlfg4jxRGvbLHYVNh8zQklKnuIbJ5JCF5hbnS%252FfkeVFSgf4Zvcb2Vtw1Uqb3MkQ%252FZkn7FEYERcgIr85J5whwBXoWOSVCZmyEehlgpavDH4MeoqwuPdLLSm%252B&autoplay=1",
+            6: "https://gdriveplayer.to/embed2.php?link=nuL17HI12fitdVtxy%252Fc%252FKwpMf1RIpALu2QHRm72F1Z%252FGsC1Hztq4DDgs0Baegzffd54DB3QjLB3cU%252FMnP1fnCxjjD3odagHeu6fMQZVCiOra6dR3qs4pzMRBPTemzF41HXuj%252F4GaOc%252BResf%252Fy0n1UrdjI0mPF2xXRDypEOt3ROTlg%252BOb8vEH3Waksg1WmNDiW8TrSHwKTF6V6sq7oY3uZb&autoplay=1",
+            7: "https://gdriveplayer.to/embed2.php?link=gQU%252FMzL%252Bl7W0%252Be0FcQF4DQx4HLpQJjgvJwLaRrOj6zFAOqGK2ScrR7%252BYOTARoStnHeXO1DwTu9j4Id1BRmRTEH0W%252FXxMoY%252BmsdnGQ0DpyQ%252FGIcNkakNVKXnSGMOwptYxbn933vhYZD6fsyqOpg%252BnNbvwCnHsc4Gzc1m9OauiyyFEOJ0NfUFgkkQswojBTM84RRPONXesOgePBzGuy9GwlV&autoplay=1",
+            8: "https://gdriveplayer.to/embed2.php?link=9h03p13gzOa2yKM9%252FnLKBgC8LILpZ4kTZrhppouCEM91Xq1COj2Bc%252BuO4Kh9aOvaM8WrJLqJOPawennX2LNHCJwMwy5FO8%252BOjRtn6aMTquogaqeQEuhJPN2zk01iEMbkp1%252Ft81ihmn%252FE8h4IJnpxl51BhYR3Agm2K2zKyFnz%252BJHs5BJYPaBmDBPqAO7QNZmRn%252FpwImjBFirQcT9LbjbdZ4&autoplay=1",
+            9: "https://gdriveplayer.to/embed2.php?link=Z5AIPnofP37R1mxHVbyNiAe9piyWXVcNveSZDGaIRksoYQkIiRdqz09w4v7vvM3QHMtRuhrCtYOEBpGeLcAp%2Fo%2BLtebneWdOtEhR9A%2B%2BWSM0WPLUR%2FP5U%2BNKoVZTF264rLI%2B%2F4Ps%2Bw%2BD90BIozN%2FBtN3ImtRHlXDO4SVFqI6VVHtZXtFrJXKj%2FxMPb3hmolc2oo%2FVuH0JVa3JYiRcgQAsD&no_adult=yes&autoplay=1",
+            10: "https://gdriveplayer.to/embed2.php?link=L5b9IO1ljjc4dNzo2DzvcARRXGziIzo8aA54Gf3BPZgmx%252B%252BDb3RNVMwGY7FFC4Zx1YFJpNh0zeWMva5CxTJq2GD%252F%252F8dA74zBO7nI5UdqKAc%252BEMD46Bkwsm5wDY8pxr9qMAjbe%252F8b3JIV3Oy0aLKkr0qm%252FT3UgsmKVyniYlbsLBp7cRKj633MGa%252BAFSHJRC9Hv0DWq11IsOJoSFCEztYqpT&autoplay=1",
+            11: "https://gdriveplayer.to/embed2.php?link=czAmpd47S%252FhU3hh0x6dwkwlCFbKIcjMTrUNpExrInEknVJD5h%252BTgXrSQfgvoEGuOQy%252B7LoigHZH%252FLae%252FOq5KqFhIeduXuY%252FESy4mtn36CTXoGAvQ2XzkdYg7Du%252BurW1NWiSdw3t75RmgkhhxOvjjMHBzYhVT6xQbqVyeTR3dJV0FElUjA22n0C4xgiJe%252B8IJPVrEeGXSLFCuVnXGaL1eV4&autoplay=1",
+            12: "https://gdriveplayer.to/embed2.php?link=ViBuVKwcQX4syAtnkXBy2wQ6qcTwGUdsMBtGHq9Kfo7wEHEFhKdbLdkA6Y9AX5lljruRu8UcncXFVWCtHddo%252FkMVpLKEXYlJIGn2lKakgfdN%252BPqNEOe0%252BfLc9T84gnTiedt57t1n8v6tBjLRrJbMlBIjK%252F1bU0ZdO83v%252B5%252FFq1dsLSllqGOx%252FkVi%252Bykt01EE6V53%252FZdhrDrflbWLlnNfl%252B&autoplay=1"
+        };
+
+        // Function to change episode
+        function changeEpisode(episodeNumber) {
+            const videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.src = episodeLinks[episodeNumber];
+            
+            // Update active episode button
+            document.querySelectorAll('.episode-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600');
+                btn.classList.add('bg-gray-800');
+            });
+            event.target.classList.remove('bg-gray-800');
+            event.target.classList.add('bg-blue-600');
+        }
+
+        // Add active class to first episode button initially
+        document.querySelector('.episode-btn').classList.add('bg-blue-600');
+        document.querySelector('.episode-btn').classList.remove('bg-gray-800');
+    </script>
+</body>
+</html>
